@@ -82,7 +82,7 @@ for(int i = 0; i < tamanho; i++){
 }
 vetor[tamanho] = 0;
 printf("%d ", vetor[tamanho]);
-printf("\n");
+printf("0\n");
 
 return 0;
 }
