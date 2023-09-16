@@ -2,7 +2,7 @@
 // Henrique Chen
 
 #include <stdio.h>
-
+// Subrotina de Ordenação
 void ordenacao(int vetor[], int tamanho) {
     int i, j, aux;
     for (i = 0; i < tamanho - 1; i++) {
@@ -15,7 +15,8 @@ void ordenacao(int vetor[], int tamanho) {
         }
     }
 }
-
+// Subrotina para excluir um valor e inserir 0 no final do vetor e remaneja os valores
+// Verifica se o índice é válido para não ocorrer exclusão inválido.
 void excluirValor(int vetor[], int tamanho, int indice){
     if(indice < 0 || indice >= tamanho){
         printf("Indice inválido\n");
@@ -44,22 +45,25 @@ int main() {
             return;
         }
     }
-
+    // Mostra o vetor inserido pelo usuário na mesma ordem que foi inserido
     printf("Vetor inserido: ");
     for (int i = 0; i < tamanho; i++) {
         printf("%d ", vetor[i]);
     }
     printf("\n");
 
-    ordenacao(vetor, tamanho); // Ordena o vetor crescente
+    ordenacao(vetor, tamanho); // Ordena o vetor em ordem crescente
 
+// Mostra o vetor ordenado.
 printf("Vetor ordenado: ");
 for (int i = 0; i < tamanho; i++) {
     printf("%d ", vetor[i]);
 }
 printf("\n");
 
-int excluirIndice = 3;
+// Faz a primeira operação de exclusão
+
+int excluirIndice = 3; // exclui o valor na posição 3
 excluirValor(vetor, tamanho, excluirIndice);
 tamanho--;
 
@@ -71,11 +75,11 @@ vetor[tamanho] = 0;
 printf("%d ", vetor[tamanho]);
 printf("\n");
 
-int excluirIndice2 = 7;
+int excluirIndice2 = 7; // exclui o valor na posição 7
 excluirValor(vetor, tamanho, excluirIndice2);
 tamanho--;
 
-// Segunda operação de exclusão em verificação.
+// Segunda operação de exclusão.
 printf("Vetor após a segunda exclusão na posição %d: ", excluirIndice2);
 for(int i = 0; i < tamanho; i++){
     printf("%d ", vetor[i]);
