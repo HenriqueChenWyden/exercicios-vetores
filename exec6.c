@@ -1,13 +1,11 @@
 #include <stdio.h>
 
-struct
-{
+struct{
     char sigla[3];
     char nome[40];
 } typedef tUF;
 
-struct
-{
+struct{
     char numero[10];
     char orgao[5];
     tUF uf; //Aninhado para o UF.
