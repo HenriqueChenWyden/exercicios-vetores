@@ -28,7 +28,7 @@ int main(){
     strcpy(rg.numero, "123456789");
     strcpy(rg.orgao, "SDS");
 
-    rg.uf = ufs[0];
+    rg.uf = ufs[0]; // atribui o estado PE ao RG
 
     printf("Número RG: %s\n", rg.numero);
     printf("Orgão Emissor: %s\n", rg.orgao);
